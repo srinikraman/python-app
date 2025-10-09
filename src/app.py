@@ -28,7 +28,8 @@ def health():
          'status': 'running',
          'additional_info': 'This is health check endpoint',
          'version': '1.0.0',
-         'date': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+         'date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+         'desc': 'health api service'
         })
 
 
