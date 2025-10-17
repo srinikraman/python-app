@@ -35,15 +35,15 @@ jobs:
     steps:
       - name: ArgoCD installation
         shell: bash
-        run:
-          curl -sSL -o argocd "https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64" && \
-          ls -la && \
-          chmod +x argocd && \
+        run: |
+          curl -sSL -o argocd "https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64"
+          ls
+          chmod +x argocd
           sudo mv argocd /usr/local/bin/argocd
        
       - name: ArgoCD App Sync
         shell: bash
-        run: 
+        run: |
           argocd login argocd-server.argocd --insecure --grpc-web --username ${{ secrets.ARGOCD_USERNAME }} --password ${{ secrets.ARGOCD_PASSWORD }}
           argocd app sync python-app
           argocd app wait python-app --health
