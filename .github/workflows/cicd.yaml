@@ -44,7 +44,7 @@ jobs:
           sed -i "s/tag: .*/tag: ${{ needs.ci.outputs.commit_id }}/" charts/python-app/values.yaml
 
       - name: Commit changes to values yaml file
-        shell: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v9
         with:
           message: "Update values yaml file with commit id ${{ needs.ci.outputs.commit_id }}"
 

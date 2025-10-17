@@ -29,7 +29,7 @@ def health():
          'additional_info': 'This is health check endpoint',
          'version': '1.0.0',
          'date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-         'desc': 'health api service!!! - cd self-hosted test-8'
+         'desc': 'health api service!!! - cd self-hosted test-9'
         })
 
 
