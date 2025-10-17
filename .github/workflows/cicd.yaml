@@ -46,9 +46,7 @@ jobs:
       - name: Commit changes to values yaml file
         shell: EndBug/add-and-commit@v9
         with:
-          add: charts/python-app/values.yaml
           message: "Update values yaml file with commit id ${{ needs.ci.outputs.commit_id }}"
-          push: true
 
       - name: ArgoCD installation
         shell: bash
